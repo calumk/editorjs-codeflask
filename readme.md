@@ -18,10 +18,11 @@ It was built to be an improvement on :
 
 ## Data Format :
 
-| Name     | Description                                                |
-| -------- | ---------------------------------------------------------- |
-| code     | The code that is displayed in the editor, with line breaks |
-| language | The programming language                                   |
+| Name            | Description                                                |
+| --------------- | ---------------------------------------------------------- |
+| code            | The code that is displayed in the editor, with line breaks |
+| language        | The programming language                                   |
+| showlinenumbers | Will show/hide the line numbers                            |
 
 
 ---
