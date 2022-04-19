@@ -14,6 +14,11 @@ It was built to be an improvement on :
 ![Demo ](./example-media/editorjs-codeflask-demo.gif)
 
 
+## Built with:
+* [CodeFlask](https://kazzkiq.github.io/CodeFlask/)
+* [Prism](https://www.npmjs.com/package/prismjs)
+* [Prism ESM Importer](https://www.npmjs.com/package/prismjs-components-importer)
+* [Nice Select 2](https://www.npmjs.com/package/nice-select2)
 
 
 ## Data Format :

@@ -4,4 +4,3 @@ src/
 webpack.config.js
 yarn.lock
 example/
-example-media/
