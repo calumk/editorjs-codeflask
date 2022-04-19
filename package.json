@@ -1,6 +1,6 @@
 {
   "name": "editorjs-codeflask",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Codeflask, for EditorJS",
   "main": "./dist/codeflask.bundle.js",
   "scripts": {
@@ -12,8 +12,7 @@
   "dependencies": {
     "codeflask": "^1.4.1",
     "nice-select2": "^2.0.0",
-    "prismjs-components-importer": "^0.1.0",
-    "uuid": "^8.3.2"
+    "prismjs-components-importer": "^0.1.0"
   },
   "devDependencies": {
     "css-loader": "^6.7.1",
