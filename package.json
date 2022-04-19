@@ -5,8 +5,7 @@
   "main": "./dist/codeflask.bundle.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --mode production",
-    "build_yalc": "webpack --mode production && yalc push"
+    "build": "webpack --mode production"
   },
   "author": "Calum Knott",
   "license": "MIT",

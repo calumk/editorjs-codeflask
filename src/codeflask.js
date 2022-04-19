@@ -2,8 +2,7 @@
  /**
   * EditorJsCodeFlask Block for the Editor.js.
   *
-  * @author CK (calum@calumk.com)
-  * @copyright Calum Knott
+  * @author Calum Knott (calum@calumk.com)
   * @license The MIT License (MIT)
   */
  
