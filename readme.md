@@ -22,7 +22,7 @@ It was built to be an improvement on :
 | --------------- | ---------------------------------------------------------- |
 | code            | The code that is displayed in the editor, with line breaks |
 | language        | The programming language                                   |
-| showlinenumbers | Will show/hide the line numbers                            |
+| showlinenumbers | Will show/hide the line numbers  (WIP - [Codeflask #132](https://github.com/kazzkiq/CodeFlask/issues/132))                          |
 
 
 ---
