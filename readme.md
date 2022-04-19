@@ -1,6 +1,6 @@
 # EditorJs - Codeflask
 
-    npm i editorjs-codeflask
+    npm i @calumk/editorjs-codeflask
 
 This is an EditorJs wrapper for [CodeFlask](https://kazzkiq.github.io/CodeFlask/) - A lovely lightweight zero-dep code formatter
 
