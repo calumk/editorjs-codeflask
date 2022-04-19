@@ -6,8 +6,8 @@ module.exports = {
   output: {
     path: path.join(__dirname, '/dist'),
     publicPath: '/',
-    filename: 'codeflask.bundle.js',
-    library: 'EditorJs_CodeFlask',
+    filename: 'editorjs-codeflask.bundle.js',
+    library: 'editorjsCodeflask',
     libraryExport: 'default',
     libraryTarget: 'umd'
   },
