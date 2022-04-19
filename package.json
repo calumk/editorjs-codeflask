@@ -1,5 +1,5 @@
 {
-  "name": "@dsle-packages/editorjs-codeflask",
+  "name": "editorjs-codeflask",
   "version": "1.0.1",
   "description": "Codeflask, for EditorJS",
   "main": "./dist/codeflask.bundle.js",
