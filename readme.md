@@ -9,9 +9,9 @@ It was built to be an improvement on :
 * https://github.com/dev-juju/codebox - Agressive styling, and exports more data than markdown can handle
 
 
-## Demo Video
+## Demo
 
-./assets/editorjs-codeflask-demo.mp4
+![Demo ](./example-media/editorjs-codeflask-demo.gif)
 
 
 
