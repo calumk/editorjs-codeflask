@@ -1,6 +1,6 @@
 {
   "name": "editorjs-codeflask",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Codeflask, for EditorJS",
   "main": "./dist/codeflask.bundle.js",
   "scripts": {
