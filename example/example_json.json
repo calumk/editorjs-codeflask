@@ -1,0 +1,17 @@
+{
+    "blocks":[
+       {
+          "type":"header",
+          "data":{
+             "text":"Editor.js",
+             "level":2
+          }
+       },
+       {
+          "type":"paragraph",
+          "data":{
+             "text":"Clean data is useful to sanitize, validate and process on the backend."
+          }
+       }
+    ]
+ }
