@@ -8,6 +8,13 @@ body {
   margin: 0;
 }
 
+.svgicon{
+  width:30px;
+  height:30px;
+  padding:8px;
+  display: inline-block;
+  vertical-align : top
+}
 .ce-example {
   font-size: 16.2px;
 }
