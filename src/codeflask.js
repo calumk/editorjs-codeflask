@@ -69,7 +69,7 @@
     * @param {boolean} readOnly - read only mode flag
     */
    constructor({data, config, api, readOnly}) {
-     console.log(data)
+    //  console.log(data)
      this.api = api;
      this.readOnly = readOnly;
  
@@ -103,7 +103,7 @@
      this.data.showlinenumbers = (data.showlinenumbers === undefined) ? true : data.showlinenumbers;
      this.data.editorInstance = {}
 
-     console.log(this.data)
+    //  console.log(this.data)
 
    }
  

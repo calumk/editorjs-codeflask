@@ -6,6 +6,7 @@
   <link href="https://fonts.googleapis.com/css?family=PT+Mono" rel="stylesheet">
   <link href="assets/demo.css" rel="stylesheet">
   <script src="assets/json-preview.js"></script>
+  <script src="example_data.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 </head>
 <body>
@@ -105,47 +106,7 @@
           // n/a
 
       },
-      data: {
-          "blocks":[
-            {
-                "type":"header",
-                "data":{
-                  "text":"Example : @calumk/editorjs-codeflask ",
-                  "level":3
-                }
-            },
-            {
-                "type":"paragraph",
-                "data":{
-                  "text":"This is an example of using EditorJs, with the @calumk/editorjs-codeflask package"
-                }
-            },
-            {
-                "type":"delimiter"
-            },
-            {
-              "type" : "code",
-              "data" : {
-                  "code" : "// example\n// This is an example of codeflask\n",
-                  "language" : "javascript"
-              }
-            },
-            {
-              "type" : "code",
-              "data" : {
-                  "code" : "// example\n%Q0.0 := TRUE;\n",
-                  "language" : "iecst",
-                  "showlinenumbers" : false
-              }
-            },
-            {
-              "type" : "code",
-              "data" : {
-                  "code" : "// minimal example \n// This is an example of codeflask with only the code setting\n"
-              }
-            },
-          ]
-      },
+      data: example_data, // Imported from example_data.js
 
 
       onReady: function(){
