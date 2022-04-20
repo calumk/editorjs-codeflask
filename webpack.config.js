@@ -1,11 +1,9 @@
 const path = require('path');
 
 module.exports = {
-    
   entry: './src/codeflask.js',
   output: {
-    path: path.join(__dirname, '/dist'),
-    publicPath: '/',
+    path: path.join(__dirname, 'dist'),
     filename: 'editorjs-codeflask.bundle.js',
     library: 'editorjsCodeflask',
     libraryExport: 'default',
