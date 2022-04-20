@@ -25,7 +25,6 @@
       <div class="ce-example__button" id="saveButton">
         editor.save()
       </div>
-
       <div class="ce-example__statusbar">
         Readonly:
         <b id="readonly-state">
@@ -47,10 +46,9 @@
 
   <!-- Load Official Tools -->
     <script src="https://cdn.jsdelivr.net/npm/@editorjs/header@latest"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/delimiter@latest"></script>
     <!--
     <script src="https://cdn.jsdelivr.net/npm/@editorjs/simple-image@latest"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@editorjs/delimiter@latest"></script>
     <script src="https://cdn.jsdelivr.net/npm/@editorjs/checklist@latest"></script>
     <script src="https://cdn.jsdelivr.net/npm/@editorjs/list@latest"></script>
     <script src="https://cdn.jsdelivr.net/npm/@editorjs/quote@latest"></script>
@@ -87,8 +85,8 @@
 
         // Load Official Tools
           header: Header,
+          delimiter: Delimiter,
           // image: SimpleImage,
-          // delimiter: Delimiter,
           // checklist: Checklist,
           // list: List,
           // quote: Quote,
@@ -121,6 +119,9 @@
                 "data":{
                   "text":"This is an example of using EditorJs, with the @calumk/editorjs-codeflask package"
                 }
+            },
+            {
+                "type":"delimiter"
             },
             {
               "type" : "code",

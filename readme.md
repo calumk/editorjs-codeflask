@@ -1,6 +1,14 @@
 # EditorJs - Codeflask
 
+### NPM
     npm i @calumk/editorjs-codeflask
+
+### JS
+    https://cdn.jsdelivr.net/npm/@calumk/editorjs-nested-checklist@latest
+
+---
+
+## About
 
 This is an EditorJs wrapper for [CodeFlask](https://kazzkiq.github.io/CodeFlask/) - A lovely lightweight zero-dep code formatter
 
@@ -15,13 +23,19 @@ It was built to be an improvement on :
 
 
 ## Built with:
+
 * [CodeFlask](https://kazzkiq.github.io/CodeFlask/)
 * [Prism](https://www.npmjs.com/package/prismjs)
 * [Prism ESM Importer](https://www.npmjs.com/package/prismjs-components-importer)
 * [Nice Select 2](https://www.npmjs.com/package/nice-select2)
 
 
-## Data Format :
+---
+
+# Technical Info 
+
+## Data Format
+The data imported/exported from the block is as follows:
 
 | Name            | Description                                                |
 | --------------- | ---------------------------------------------------------- |
@@ -30,7 +44,9 @@ It was built to be an improvement on :
 | showlinenumbers | Will show/hide the line numbers (Default true) (WIP - [Codeflask #132](https://github.com/kazzkiq/CodeFlask/issues/132))                          |
 
 
----
+
+
+<!-- ---
 
 ## Markdown Compatability
 
@@ -48,4 +64,4 @@ Example :
 
     ```javascript
     \\ Hello World
-    ```
+    ``` -->
