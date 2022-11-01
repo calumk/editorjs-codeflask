@@ -195,18 +195,17 @@
     for (var i = 0; i < Object.keys(Prism.languages).length; i++) {
 
         // Weirdly PrismJS doesnt expose a list of installed languages, or rather it does, but it is mixed with helper functions, which i have to clear here.
-        if( !(Object.keys(Prism.languages)[i] == "extend") && !(Object.keys(Prism.languages)[i] == "insertBefore") && !(Object.keys(Prism.languages)[i] == "DFS")){
-
-          var option = document.createElement("option");
-          option.value = Object.keys(Prism.languages)[i];
-          option.text = Object.keys(Prism.languages)[i];
-          if(Object.keys(Prism.languages)[i] == this.data.language){
-            option.selected="selected"
-          }
-          languagesSelect.appendChild(option);
-
+        if (Object.keys(Prism.languages)[i] == "extend" || Object.keys(Prism.languages)[i] == "insertBefore" || Object.keys(Prism.languages)[i] == "DFS") {
+          continue;
         }
 
+        var option = document.createElement("option");
+        option.value = Object.keys(Prism.languages)[i];
+        option.text = Object.keys(Prism.languages)[i];
+        if(Object.keys(Prism.languages)[i] == this.data.language){
+          option.selected="selected"
+        }
+        languagesSelect.appendChild(option);
     }
 
     languagesSelect.addEventListener('change', (event) => {
