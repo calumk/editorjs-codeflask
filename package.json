@@ -1,17 +1,15 @@
 {
-  "name": "@calumk/editorjs-codeflask",
+  "name": "@samandar.boymurodov/editorjs-codeflask",
   "description": "Codeflask, for EditorJS",
-  "version": "1.0.9",
-
+  "version": "1.0.10",
   "author": "Calum Knott",
-  "repository": "https://github.com/calumk/editorjs-codeflask",
+  "repository": "https://github.com/samandar-boymurodov/editorjs-codeflask",
   "license": "MIT",
-
   "main": "./dist/editorjs-codeflask.bundle.js",
   "scripts": {
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "build:dev": "webpack --mode development --watch"
   },
-
   "dependencies": {
     "codeflask": "^1.4.1",
     "nice-select2": "^2.0.0",
