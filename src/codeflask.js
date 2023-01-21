@@ -41,6 +41,7 @@
 
   import NiceSelect from "nice-select2/dist/js/nice-select2";
   import NiceSelectStyle from "nice-select2/dist/css/nice-select2.css";
+  import { EXCLUDED_LANGUAGES } from "./vars";
 
  class EditorJsCodeFlask {
    /**
@@ -196,15 +197,15 @@
     //Create and append the options
     for (var i = 0; i < languages.length; i++) {
         // Weirdly PrismJS doesnt expose a list of installed languages, or rather it does, but it is mixed with helper functions, which i have to clear here.
-        if (languages[i] == "extend" || languages[i] == "insertBefore" || languages[i] == "DFS") {
+        if (EXCLUDED_LANGUAGES.includes(languages[i])) {
           continue;
         }
 
         var option = document.createElement("option");
         option.value = languages[i];
         option.text = languages[i];
-        if(languages[i] == this.data.language){
-          option.selected="selected"
+        if(languages[i] === this.data.language){
+          option.selected = "selected"
         }
         languagesSelect.appendChild(option);
     }
