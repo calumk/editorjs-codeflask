@@ -5,13 +5,13 @@
   * @author Calum Knott (calum@calumk.com)
   * @license The MIT License (MIT)
   */
- 
+
  /**
   * @typedef {object} EditorJsCodeFlaskConfig
   * @property {string} placeholder - placeholder for the empty EditorJsCodeFlask
   * @property {boolean} preserveBlank - Whether or not to keep blank EditorJsCodeFlasks when saving editor data
   */
- 
+
  /**
   * @typedef {Object} EditorJsCodeFlaskData
   * @description Tool's input and output data format
@@ -23,27 +23,26 @@
 
   import Prism from 'prismjs';
 
+  // Additional languages
+  import "prismjs/components/prism-java"
+  import "prismjs/components/prism-go"
+  import "prismjs/components/prism-typescript"
+
   // import "prismjs-components-importer/esm"; // ALL - Massivly Increases Bundle size!
 
   import "prismjs-components-importer/esm/prism-iecst"; // Structured Text
-  import "prismjs-components-importer/esm/prism-markdown"; 
-  import "prismjs-components-importer/esm/prism-json"; 
+  import "prismjs-components-importer/esm/prism-markdown";
+  import "prismjs-components-importer/esm/prism-json";
   import "prismjs-components-importer/esm/prism-python";
   import "prismjs-components-importer/esm/prism-bash";
- 
+
 
   import CodeFlask from 'codeflask';
 
   import NiceSelect from "nice-select2/dist/js/nice-select2";
   import NiceSelectStyle from "nice-select2/dist/css/nice-select2.css";
+  import { EXCLUDED_LANGUAGES } from "./vars";
 
-
-
-
-  // console.log(Prism.languages)
-
-
- 
  class EditorJsCodeFlask {
    /**
     * Default placeholder for EditorJsCodeFlask Tool
@@ -58,7 +57,7 @@
    static get enableLineBreaks() {
     return true;
   }
- 
+
    /**
     * Render plugin`s main Element and fill it with saved data
     *
@@ -72,18 +71,18 @@
     //  console.log(data)
      this.api = api;
      this.readOnly = readOnly;
- 
+
      this._CSS = {
        block: this.api.styles.block,
        wrapper: 'ce-EditorJsCodeFlask',
        settingsButton: this.api.styles.settingsButton,
        settingsButtonActive: this.api.styles.settingsButtonActive,
      };
- 
+
      if (!this.readOnly) {
        this.onKeyUp = this.onKeyUp.bind(this);
      }
- 
+
      /**
       * Placeholder for EditorJsCodeFlask if it is first Block
       * @type {string}
@@ -94,7 +93,7 @@
 
      this._element; // used to hold the wrapper div, as a point of reference
 
- 
+
 
      // let x = (x === undefined) ? your_default_value : x;
      this.data = {}
@@ -106,7 +105,7 @@
     //  console.log(this.data)
 
    }
- 
+
    /**
     * Check if text content is empty and set empty string to inner html.
     * We need this because some browsers (e.g. Safari) insert <br> into empty contenteditanle elements
@@ -117,15 +116,15 @@
      if (e.code !== 'Backspace' && e.code !== 'Delete') {
        return;
      }
- 
+
      const {textContent} = this._element;
- 
+
      if (textContent === '') {
        this._element.innerHTML = '';
      }
    }
 
- 
+
    /**
     * Return Tool's view
     *
@@ -145,8 +144,8 @@
     this._element.appendChild(editorElem)
     this._element.appendChild(langdisplay)
 
-    this.data.editorInstance = new CodeFlask(editorElem, { 
-      language: this.data.language, 
+    this.data.editorInstance = new CodeFlask(editorElem, {
+      language: this.data.language,
       lineNumbers : this.data.showlinenumbers,
       readonly : this.readOnly
     });
@@ -198,15 +197,15 @@
     //Create and append the options
     for (var i = 0; i < languages.length; i++) {
         // Weirdly PrismJS doesnt expose a list of installed languages, or rather it does, but it is mixed with helper functions, which i have to clear here.
-        if (languages[i] == "extend" || languages[i] == "insertBefore" || languages[i] == "DFS") {
+        if (EXCLUDED_LANGUAGES.includes(languages[i])) {
           continue;
         }
 
         var option = document.createElement("option");
         option.value = languages[i];
         option.text = languages[i];
-        if(languages[i] == this.data.language){
-          option.selected="selected"
+        if(languages[i] === this.data.language){
+          option.selected = "selected"
         }
         languagesSelect.appendChild(option);
     }
@@ -232,7 +231,7 @@
 
     settingsContainer.appendChild(languagesSelect);
     new NiceSelect(languagesSelect, {searchable : true, placeholder : "Language..."});
-    
+
     // settingsContainer.appendChild(settingsButton);
 
     return settingsContainer;
@@ -249,12 +248,13 @@
 
   _updateLanguage = (lang) => {
     this.data.language = lang
-    this._element.querySelector('.editorjs-codeFlask_LangDisplay').innerHTML = this.data.language
-    this.data.editorInstance.updateLanguage(this.data.language)
+    this._element.querySelector('.editorjs-codeFlask_LangDisplay').innerHTML = lang
+    this.data.editorInstance.addLanguage(lang, Prism.languages[lang])
+    this.data.editorInstance.updateLanguage(lang)
   }
- 
 
- 
+
+
    /**
     * Extract Tool's data from the view
     * @param {HTMLDivElement} toolsContent - EditorJsCodeFlask tools rendered view
@@ -267,10 +267,10 @@
       language : this.data.language,
       showlinenumbers : this.data.showlinenumbers
     };
-    
+
     return resp
    }
- 
+
    /**
     * Returns true to notify the core that read-only mode is supported
     *
@@ -280,7 +280,7 @@
      return true;
    }
 
- 
+
    /**
     * Icon and title for displaying at the Toolbox
     *
@@ -293,5 +293,5 @@
      };
    }
  }
- 
+
 export { EditorJsCodeFlask as default }
