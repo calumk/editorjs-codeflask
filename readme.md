@@ -4,7 +4,7 @@
     npm i @calumk/editorjs-codeflask
 
 ### JS
-    https://cdn.jsdelivr.net/npm/@calumk/editorjs-nested-checklist@latest
+    https://cdn.jsdelivr.net/npm/@calumk/editorjs-codeflask@latest
 
 ---
 
