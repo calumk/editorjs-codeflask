@@ -1,5 +1,5 @@
 {
-  "name": "@calumk/editorjs-codeflask",
+  "name": "@luuqnhu/editorjs-codeflask",
   "description": "Codeflask, for EditorJS",
   "version": "1.0.9",
 
@@ -9,13 +9,14 @@
 
   "main": "./dist/editorjs-codeflask.bundle.js",
   "scripts": {
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "build:dev": "webpack --mode development --watch"
   },
 
   "dependencies": {
     "codeflask": "^1.4.1",
     "nice-select2": "^2.0.0",
-    "prismjs-components-importer": "^0.1.0"
+    "prismjs-components-importer": "^0.2.0"
   },
   "devDependencies": {
     "css-loader": "^6.7.1",

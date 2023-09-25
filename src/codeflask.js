@@ -23,6 +23,9 @@
 
   import Prism from 'prismjs';
 
+  // Additional languages
+  import "prismjs/components/prism-java"
+
   // import "prismjs-components-importer/esm"; // ALL - Massivly Increases Bundle size!
 
   import "prismjs-components-importer/esm/prism-iecst"; // Structured Text
@@ -294,4 +297,5 @@
    }
  }
  
-export { EditorJsCodeFlask as default }
+// export { EditorJsCodeFlask as default }
+export default EditorJsCodeFlask
