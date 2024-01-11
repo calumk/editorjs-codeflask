@@ -1,5 +1,10 @@
 # EditorJs - Codeflask
 
+> [!IMPORTANT]
+> This repo will be archived soon. Please upgrade to [@calumk/editorjs-codecup](http://github.com/calumk/editorjs-codecup)
+
+---
+
 ### NPM
     npm i @calumk/editorjs-codeflask
 
