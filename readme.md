@@ -1,7 +1,17 @@
 # EditorJs - Codeflask
 
+> [!WARNING]
+> This repo is depreciated / archived.
+
 > [!IMPORTANT]
-> This repo will be archived soon. Please upgrade to [@calumk/editorjs-codecup](http://github.com/calumk/editorjs-codecup)
+> Due to changes in the core editor (Change from codeflask -> codecup) I have decided to fork this repo, and depreciate it.
+>
+> The Plugin originally relied on [CodeFlask](https://kazzkiq.github.io/CodeFlask/), which i have also forked, and republished as [CodeCup](https://github.com/calumk/codecup)
+>
+> As such, the plugin is now different enough, that i have decided to republish it under its new name, so I can accept issues/pull requests on the whole stack, and maintain it better going forwards
+> 
+> Please upgrade to [@calumk/editorjs-codecup](http://github.com/calumk/editorjs-codecup)
+
 
 ---
 
