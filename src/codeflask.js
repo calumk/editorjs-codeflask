@@ -92,7 +92,7 @@
 
      this._preserveBlank = config.preserveBlank !== undefined ? config.preserveBlank : false;
 
-     this._element; // used to hold the wrapper div, as a point of reference
+    //  this._element; // used to hold the wrapper div, as a point of reference
 
  
 
@@ -104,6 +104,8 @@
      this.data.editorInstance = {}
 
     //  console.log(this.data)
+
+      this._element = this.drawView();
 
    }
  
@@ -125,16 +127,14 @@
      }
    }
 
- 
    /**
-    * Return Tool's view
-    *
+    * Creates a new EditorJsCodeFlask Block's view and returns it.
+    * 
     * @returns {HTMLDivElement}
     */
-   render() {
-
-    this._element = document.createElement('div');
-    this._element.classList.add('editorjs-codeFlask_Wrapper')
+   drawView() {
+    const wrapper = document.createElement('div');
+    wrapper.classList.add('editorjs-codeFlask_Wrapper')
     let editorElem = document.createElement('div');
     editorElem.classList.add('editorjs-codeFlask_Editor')
     let langdisplay = document.createElement('div');
@@ -142,8 +142,8 @@
 
     langdisplay.innerHTML = this.data.language
 
-    this._element.appendChild(editorElem)
-    this._element.appendChild(langdisplay)
+    wrapper.appendChild(editorElem)
+    wrapper.appendChild(langdisplay)
 
     this.data.editorInstance = new CodeFlask(editorElem, { 
       language: this.data.language, 
@@ -161,6 +161,16 @@
     this.data.editorInstance.addLanguage(this.data.language, Prism.languages[this.data.language]);
     this.data.editorInstance.updateCode(this.data.code);
 
+    return wrapper;
+   }
+
+ 
+   /**
+    * Return Tool's view
+    *
+    * @returns {HTMLDivElement}
+    */
+   render() {
     return this._element
    }
 
